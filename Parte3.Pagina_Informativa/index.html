@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La importancia de la conservación del medio ambiente</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #333;
+            padding: 5px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        nav ul li button:hover {
+            background-color: #45a049;
+        }
+
+        /* Contenido */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Ajuste de tamaño para todas las imágenes */
+        img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La importancia de la conservación del medio ambiente en el desarrollo sostenible</h1>
+        <p>Presiona los botones para conocer más sobre los diferentes subtemas.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button onclick="mostrarContenido('contaminacion')">♻️ Contaminación</button></li>
+            <li><button onclick="mostrarContenido('biodiversidad')">🦜 Pérdida de biodiversidad</button></li>
+            <li><button onclick="mostrarContenido('cambio_climatico')">🌡️ Cambio climático</button></li>
+            <li><button onclick="mostrarContenido('energias_renovables')">🔋 Energías renovables</button></li>
+            <li><button onclick="mostrarContenido('reciclaje')">🗑️ Reciclaje y economía circular</button></li>
+            <li><button onclick="mostrarContenido('educacion_ambiental')">📚 Educación ambiental</button></li>
+            <li><button onclick="mostrarContenido('politicas_internacionales')">🌐 Políticas internacionales</button></li>
+        </ul>
+    </nav>
+
+    <section id="contenido">
+        <p>Selecciona un tema para ver la información.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Conservación Ambiental. Elabordo por Jazmin Pérez.</p>
+    </footer>
+
+    <script>
+        function mostrarContenido(tema) {
+            let contenido = document.getElementById('contenido');
+            let texto;
+
+            switch (tema) {
+                case 'contaminacion':
+                    texto = `
+                        <h2>Contaminación del aire, agua y suelo</h2>
+                        <p>La contaminación es uno de los problemas ambientales más graves. La emisión de gases contaminantes afecta la calidad del aire, el agua y el suelo, perjudicando tanto la salud humana como la biodiversidad.</p>
+                        <p>Los principales contaminantes del aire incluyen el dióxido de carbono, óxidos de nitrógeno y partículas en suspensión, provenientes del transporte y la industria.</p>
+                        <p>En el caso del agua, el vertido de productos químicos y residuos industriales en ríos y océanos amenaza la vida acuática.</p>
+                        <p>El suelo se ve afectado por residuos sólidos, pesticidas y metales pesados que alteran la fertilidad y biodiversidad del terreno.</p>
+                        <p>La contaminación impacta en el cambio climático, enfermedades respiratorias y la destrucción de ecosistemas enteros.</p>
+                        <p>Reducir la contaminación requiere el compromiso de gobiernos, industrias y ciudadanos mediante políticas ambientales, reciclaje y tecnologías limpias.</p>
+                        <img src="contaminacion.jpg" alt="Contaminación">
+                    `;
+                    break;
+                case 'biodiversidad':
+                    texto = `
+                        <h2>Pérdida de biodiversidad</h2>
+                        <p>La pérdida de biodiversidad afecta el equilibrio de los ecosistemas. La deforestación, la contaminación y el cambio climático están contribuyendo a la extinción de muchas especies.</p>
+                        <p>La biodiversidad es esencial para mantener funciones ecológicas como la polinización, el ciclo del agua y la fertilidad del suelo.</p>
+                        <p>La agricultura intensiva y la expansión urbana destruyen hábitats naturales, afectando a plantas, animales e insectos.</p>
+                        <p>Los ecosistemas con mayor biodiversidad son más resilientes ante desastres naturales y cambios climáticos.</p>
+                        <p>La pérdida de especies también afecta la medicina, ya que muchas tienen propiedades curativas aún desconocidas.</p>
+                        <p>Es fundamental conservar reservas naturales y establecer leyes que protejan especies en peligro.</p>
+                        <img src="biodiversidad.jpg" alt="Biodiversidad">
+                    `;
+                    break;
+                case 'cambio_climatico':
+                    texto = `
+                        <h2>Cambio climático</h2>
+                        <p>El cambio climático está alterando los patrones meteorológicos, provocando fenómenos extremos como sequías, inundaciones y olas de calor, afectando la vida en el planeta.</p>
+                        <p>Es causado principalmente por la emisión de gases de efecto invernadero como el dióxido de carbono y el metano.</p>
+                        <p>Estos gases provienen de actividades humanas como la quema de combustibles fósiles, deforestación y agricultura intensiva.</p>
+                        <p>El aumento del nivel del mar pone en riesgo a comunidades costeras y ecosistemas marinos.</p>
+                        <p>Los cambios climáticos extremos pueden generar migraciones forzadas y afectar la producción de alimentos.</p>
+                        <p>Mitigar el cambio climático requiere acciones globales como el uso de energías limpias, transporte sostenible y protección de bosques.</p>
+                        <img src="cambio_climatico.jpg" alt="Cambio climático">
+                    `;
+                    break;
+                case 'energias_renovables':
+                    texto = `
+                        <h2>Energías renovables</h2>
+                        <p>Las energías renovables son una alternativa más limpia a los combustibles fósiles, contribuyendo a la reducción de la huella de carbono y a la sostenibilidad energética.</p>
+                        <p>Entre las más comunes se encuentran la solar, eólica, hidroeléctrica, geotérmica y biomasa.</p>
+                        <p>No generan emisiones contaminantes durante su uso y son inagotables a largo plazo.</p>
+                        <p>Además de proteger el medio ambiente, crean empleos verdes y fomentan el desarrollo tecnológico.</p>
+                        <p>La energía solar es ideal para hogares y comunidades aisladas, mientras que la eólica se implementa en parques eólicos.</p>
+                        <p>La transición energética global requiere inversiones, incentivos y educación ambiental.</p>
+                        <img src="energias_renovables.jpeg" alt="Energías renovables">
+                    `;
+                    break;
+                case 'reciclaje':
+                    texto = `
+                        <h2>Reciclaje y economía circular</h2>
+                        <p>El reciclaje es una forma efectiva de reducir la contaminación y aprovechar los recursos. La economía circular promueve la reutilización de materiales para crear un ciclo sostenible.</p>
+                        <p>Separar correctamente residuos en orgánicos, inorgánicos y reciclables es fundamental para el proceso.</p>
+                        <p>Materiales como papel, vidrio, plástico y metales pueden tener una segunda vida útil.</p>
+                        <p>La economía circular evita el modelo lineal de "producir, usar y desechar".</p>
+                        <p>Fomenta el ecodiseño, la reparación de productos y la reducción del consumo innecesario.</p>
+                        <p>Este modelo ayuda a conservar recursos naturales, disminuir la generación de basura y proteger la biodiversidad.</p>
+                        <img src="reciclaje.jpeg" alt="Reciclaje">
+                    `;
+                    break;
+                case 'educacion_ambiental':
+                    texto = `
+                        <h2>Educación ambiental</h2>
+                        <p>La educación ambiental busca sensibilizar a las personas sobre la importancia de proteger el medio ambiente y fomentar conductas responsables hacia la naturaleza.</p>
+                        <p>Desde la infancia, se pueden promover valores como el respeto, el cuidado y la responsabilidad ecológica.</p>
+                        <p>Incluye actividades como talleres, campañas, excursiones ecológicas y participación comunitaria.</p>
+                        <p>Es fundamental en escuelas, hogares, medios de comunicación y políticas públicas.</p>
+                        <p>Una sociedad educada ambientalmente toma decisiones más sostenibles en su vida diaria.</p>
+                        <p>Promover el reciclaje, el uso eficiente del agua y la energía, y el consumo responsable son ejemplos de su impacto.</p>
+                        <img src="educacion_ambiental.jpg" alt="Educación ambiental">
+                    `;
+                    break;
+                case 'politicas_internacionales':
+                    texto = `
+                        <h2>Políticas internacionales para la protección ambiental</h2>
+                        <p>Existen acuerdos internacionales, como el Protocolo de Kioto y el Acuerdo de París, que buscan reducir las emisiones de gases de efecto invernadero y frenar el cambio climático.</p>
+                        <p>Estas políticas son fundamentales para establecer metas comunes entre países desarrollados y en vías de desarrollo.</p>
+                        <p>También promueven la cooperación en transferencia de tecnología y financiamiento de proyectos sostenibles.</p>
+                        <p>La ONU, a través de sus organismos, lidera iniciativas globales como la Agenda 2030 y los Objetivos de Desarrollo Sostenible (ODS).</p>
+                        <p>Otros tratados importantes incluyen el Convenio de Basilea (residuos peligrosos) y el Convenio sobre la Diversidad Biológica.</p>
+                        <p>El éxito de estas políticas depende del compromiso político, la participación ciudadana y la aplicación real de los acuerdos.</p>
+                        <img src="politicas_internacionales.jpg" alt="Políticas internacionales">
+                    `;
+                    break;
+                default:
+                    texto = "<p>Selecciona un tema para ver la información.</p>";
+            }
+
+            contenido.innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
